@@ -4,7 +4,20 @@
 		<title>E-Save</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" charset="utf-8" src="../../../js/jquery-1.7.2.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../../../js/myjava.js"></script>
   		<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" charset="utf-8">
+			if(isAndroid()) {
+				$("script").attr("src", "../../../js/cordova-2.6.0-android.js").appendTo("head");
+			} else if(isiOS()) {
+				$("script").attr("src", "../../../js/cordova-2.6.0-ios.js").appendTo("head");
+			} else if(isBlackBerry()) {
+				$("script").attr("src", "../../../js/cordova-2.6.0-blackberry.js").appendTo("head");
+			} else {
+				$("script").attr("src", "../../../js/cordova-2.6.0-wp.js").appendTo("head");
+			}
+		</script>
   	</head>
   	<body>
     	<div id="header">
@@ -80,10 +93,10 @@
 				<div>- na mesto nesreče ne pridejo reševalci</div>
 				<div style="margin-bottom: 10px">- zmoremo in nismo popolnoma izčrpani</div>
 				
-				<div style="margin-bottom: 10px">Posnetek TPO za dojenčka: <span style="color: #3cff00">http://www.e-save.si/video/dojencek.mp4</span></div>
-				<div style="margin-bottom: 10px">Posnetek TPO za otroka: <span style="color: #3cff00">http://www.e-save.si/video/otrok.mp4</span></div>
-				<div style="margin-bottom: 10px">Posnetek TPO za odraslo osebo: <span style="color: #3cff00">http://www.e-save.si/video/odrasli.mp4</span></div>
-				<div style="margin-bottom: 10px">Stabilni bočni položaj: <span style="color: #3cff00">http://www.e-save.si/video/bocni.mp4</span></div>
+				<div style="margin-bottom: 10px">Posnetek TPO za dojenčka: <span style="color: #3cff00" onclick="window.open('http://www.e-save.si/video/dojencek.mp4', '_system');">klikni tukaj</span></div>
+				<div style="margin-bottom: 10px">Posnetek TPO za otroka: <span style="color: #3cff00" onclick="window.open('http://www.e-save.si/video/otrok.mp4', '_system');">klikni tukaj</span></div>
+				<div style="margin-bottom: 10px">Posnetek TPO za odraslo osebo: <span style="color: #3cff00" onclick="window.open('http://www.e-save.si/video/odrasli.mp4', '_system');">klikni tukaj</span></div>
+				<div style="margin-bottom: 10px">Stabilni bočni položaj: <span style="color: #3cff00" onclick="window.open('http://www.e-save.si/video/bocni.mp4', '_system');">klikni tukaj</span></div>
 				
 				<div class="button" id="nadaljuj" onclick="window.location='nivo3.html'">NADALJUJ</div>
 			</div>
